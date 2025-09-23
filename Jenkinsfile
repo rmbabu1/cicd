@@ -52,7 +52,7 @@ pipeline {
         }
     }
     stage('SonarQube Inspection') {
-x        steps {
+        steps {
             withSonarQubeEnv('SonarQube') { 
                 withCredentials([string(credentialsId: 'SonarQube-Token', variable: 'SONAR_TOKEN')]) {
                 sh """
