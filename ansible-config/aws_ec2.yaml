@@ -4,8 +4,8 @@ regions:
   - ap-south-1
 filters:
   # Different Evironments
-  tag:Environment:
-    - dev
+  tag:Name:
+    - Environment dev
   #  - stage
    # - prod
   # Filter Running instances only
