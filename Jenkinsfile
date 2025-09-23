@@ -52,12 +52,12 @@ pipeline {
         }
     }
     stage('SonarQube Inspection') {
-        steps {
+x        steps {
             withSonarQubeEnv('SonarQube') { 
                 withCredentials([string(credentialsId: 'SonarQube-Token', variable: 'SONAR_TOKEN')]) {
                 sh """
                 mvn sonar:sonar \
-                -Dsonar.projectKey=JavaWebApp-Project \
+                -Dsonar.projectKey=Jsqp_fab6122a8c897485fdf74b573425b54b249ed75e \
                 -Dsonar.host.url='3.108.221.133:9000' \
                 -Dsonar.login=$SONAR_TOKEN
                 """
